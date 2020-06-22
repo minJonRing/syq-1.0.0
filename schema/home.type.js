@@ -6,6 +6,8 @@ let hometype = new Schema({
   link2: { type: String, default: '' },
   link3: { type: String, default: '' },
   link4: { type: String, default: '' },
+  link5: { type: String, default: '' },
+  link6: { type: String, default: '' },
   isDelete: { type: Boolean, default: false },
   createtime: { type: Date, default: Date.now }
 })

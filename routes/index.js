@@ -11,6 +11,22 @@ router.get('/', async (ctx, next) => {
     // description: keys.data.description
   })
 })
+router.get('/project', async (ctx, next) => {
+  const keys = await keywords.getKeywords({ type: 1 })
+  await ctx.render('project', {
+    // title: keys.data.title || '杭州思影奇',
+    // keywords: keys.data.keywords,
+    // description: keys.data.description
+  })
+})
+router.get('/news', async (ctx, next) => {
+  const keys = await keywords.getKeywords({ type: 1 })
+  await ctx.render('news', {
+    // title: keys.data.title || '杭州思影奇',
+    // keywords: keys.data.keywords,
+    // description: keys.data.description
+  })
+})
 router.get('/company', async (ctx, next) => {
   const keys = await keywords.getKeywords({ type: 1 })
   await ctx.render('company', {
