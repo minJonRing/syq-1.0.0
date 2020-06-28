@@ -11,6 +11,7 @@ let project = new Schema({
   video: { type: String },
   isLong: { type: Boolean, default: false },
   isDelete: { type: Boolean, default: false },
+  isOutVideo: { type: Boolean, default: false },
   content: { type: String, required: true },
   createtime: { type: Date, default: Date.now },
   browse: { type: Number, default: 0 }
