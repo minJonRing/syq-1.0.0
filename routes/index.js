@@ -4,7 +4,7 @@ const keywords = require('./fn')
 
 
 router.get('/', async (ctx, next) => {
-  const keys = await keywords.getKeywords({ type: 1 })
+  const keys = await keywords.getKeywords({ type: 'index' })
   await ctx.render('index', {
     // title: keys.data.title || '杭州思影奇',
     // keywords: keys.data.keywords,
@@ -12,7 +12,7 @@ router.get('/', async (ctx, next) => {
   })
 })
 router.get('/project', async (ctx, next) => {
-  const keys = await keywords.getKeywords({ type: 1 })
+  const keys = await keywords.getKeywords({ type: 'project' })
   await ctx.render('project', {
     // title: keys.data.title || '杭州思影奇',
     // keywords: keys.data.keywords,
@@ -20,7 +20,7 @@ router.get('/project', async (ctx, next) => {
   })
 })
 router.get('/news', async (ctx, next) => {
-  const keys = await keywords.getKeywords({ type: 1 })
+  const keys = await keywords.getKeywords({ type: 'news' })
   await ctx.render('news', {
     // title: keys.data.title || '杭州思影奇',
     // keywords: keys.data.keywords,
@@ -28,7 +28,7 @@ router.get('/news', async (ctx, next) => {
   })
 })
 router.get('/company', async (ctx, next) => {
-  const keys = await keywords.getKeywords({ type: 1 })
+  const keys = await keywords.getKeywords({ type: 'company' })
   await ctx.render('company', {
     // title: keys.data.title || '杭州思影奇',
     // keywords: keys.data.keywords,
@@ -36,7 +36,7 @@ router.get('/company', async (ctx, next) => {
   })
 })
 router.get('/client', async (ctx, next) => {
-  const keys = await keywords.getKeywords({ type: 1 })
+  const keys = await keywords.getKeywords({ type: 'client' })
   await ctx.render('client', {
     // title: keys.data.title || '杭州思影奇',
     // keywords: keys.data.keywords,
@@ -44,7 +44,7 @@ router.get('/client', async (ctx, next) => {
   })
 })
 router.get('/join', async (ctx, next) => {
-  const keys = await keywords.getKeywords({ type: 1 })
+  const keys = await keywords.getKeywords({ type: 'join' })
   await ctx.render('join', {
     // title: keys.data.title || '杭州思影奇',
     // keywords: keys.data.keywords,
@@ -52,7 +52,7 @@ router.get('/join', async (ctx, next) => {
   })
 })
 router.get('/contact', async (ctx, next) => {
-  const keys = await keywords.getKeywords({ type: 1 })
+  const keys = await keywords.getKeywords({ type: 'contact' })
   await ctx.render('contact', {
     // title: keys.data.title || '杭州思影奇',
     // keywords: keys.data.keywords,

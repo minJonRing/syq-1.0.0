@@ -1,5 +1,5 @@
 const mongoose = require("mongoose");
-const { getAll, addOne, updateOne } = require("./fn");
+const { getAll, getOne, addOne, updateOne } = require("./fn");
 const Schema = mongoose.Schema;
 let keyword = new Schema({
   id: { type: Number, required: true, unique: true },
@@ -14,6 +14,24 @@ let keyword = new Schema({
 keyword.statics = {
   getAll(option) {
     return getAll.call(this, option)
+  },
+  getOne(option) {
+    return new Promise((resolev, reject) => {
+      this.findOne({
+        type: option.type
+      })
+        .exec((err, doc) => {
+          try {
+            if (!err && doc) {
+              resolev({ code: 200, msg: '数据请求成功', data: doc })
+            } else {
+              resolev({ code: 200, msg: err, data: doc })
+            }
+          } catch (e) {
+            resolev({ code: 200, msg: e, data: '' })
+          }
+        })
+    })
   },
   addOne(option) {
     return addOne.call(this, option)
