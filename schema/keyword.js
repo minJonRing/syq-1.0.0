@@ -15,9 +15,6 @@ keyword.statics = {
   getAll(option) {
     return getAll.call(this, option)
   },
-  // getOne(option) {
-  //   return getOne.call(this, option)
-  // },
   addOne(option) {
     return addOne.call(this, option)
   },
