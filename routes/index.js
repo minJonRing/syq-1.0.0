@@ -19,9 +19,25 @@ router.get('/project', async (ctx, next) => {
     // description: keys.data.description
   })
 })
+router.get('/project-info', async (ctx, next) => {
+  const keys = await keywords.getKeywords({ type: 'project' })
+  await ctx.render('project-item', {
+    // title: keys.data.title || '杭州思影奇',
+    // keywords: keys.data.keywords,
+    // description: keys.data.description
+  })
+})
 router.get('/news', async (ctx, next) => {
   const keys = await keywords.getKeywords({ type: 'news' })
   await ctx.render('news', {
+    // title: keys.data.title || '杭州思影奇',
+    // keywords: keys.data.keywords,
+    // description: keys.data.description
+  })
+})
+router.get('/news-info', async (ctx, next) => {
+  const keys = await keywords.getKeywords({ type: 'news' })
+  await ctx.render('news-item', {
     // title: keys.data.title || '杭州思影奇',
     // keywords: keys.data.keywords,
     // description: keys.data.description
