@@ -5,6 +5,7 @@ const json = require('koa-json')
 const onerror = require('koa-onerror')
 const bodyparser = require('koa-bodyparser')
 const logger = require('koa-logger')
+const range = require('koa-range')
 // 数据库
 const mongoose = require("mongoose")
 mongoose.set('useCreateIndex', true)
@@ -38,6 +39,7 @@ app.use(bodyparser({
 }))
 app.use(json())
 app.use(logger())
+app.use(range)
 app.use(require('koa-static')(__dirname + '/public'))
 
 app.use(views(__dirname + '/views', {
