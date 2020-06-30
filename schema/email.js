@@ -19,7 +19,7 @@ email.statics = {
   getList(option) {
     let filter = Object.assign({
       isDelete: false
-    }, (option.isSend + '') ? { isSend: option.isSend } : {})
+    }, option.isSend + '' ? { isSend: option.isSend } : {})
     return getList.call(this, option, { filter, sort: { 'id': -1 } })
   },
   getOne(option) {

@@ -4,7 +4,7 @@ const nodemailer = require('nodemailer')
 
 router.get('/email/list', async (ctx, next) => {
   await next()
-  const data = await email.getOne(ctx.query)
+  const data = await email.getList(ctx.query)
   ctx.body = data
 })
 
