@@ -4,7 +4,7 @@ dist/
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-**/*.log
+# **/*.log
 public/upload/editor/*
 public/upload/img/*
 public/upload/video/*
