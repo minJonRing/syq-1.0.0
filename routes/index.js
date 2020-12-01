@@ -33,7 +33,7 @@ router.get('/project-info', async (ctx, next) => {
   //   keywords: keys.data.keywords,
   //   description: keys.data.description
   // } : initObj
-  await ctx.render('project-item')
+  await ctx.render('project-item', initObj)
 })
 router.get('/news', async (ctx, next) => {
   const keys = await keywords.getKeywords({ type: 'news' })
@@ -51,7 +51,7 @@ router.get('/news-info', async (ctx, next) => {
   //   keywords: keys.data.keywords,
   //   description: keys.data.description
   // } : initObj
-  await ctx.render('news-item')
+  await ctx.render('news-item', initObj)
 })
 router.get('/company', async (ctx, next) => {
   const keys = await keywords.getKeywords({ type: 'company' })
